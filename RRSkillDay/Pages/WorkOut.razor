@@ -1,0 +1,81 @@
+﻿@page "/WorkOut";
+
+<MudCard>
+
+    <MudCardHeader>
+
+        <CardHeaderContent>
+            <MudText Typo="Typo.h6"><b>Skill Work</b> (10 mins)</MudText>
+        </CardHeaderContent>
+
+    </MudCardHeader>
+
+    <MudCardContent>
+
+        <MudCard Outlined="true">
+            <MudCardContent>
+                <MudText><b>HandStand Progression</b> (5-10 minutes)</MudText>
+                <MudText Typo="Typo.body2" onclick="location.href='https://www.reddit.com/r/bodyweightfitness/wiki/exercises/handstand/'">
+                    You're not supposed to hold a HS for 5-10 minutes nonstop. Hold it for 20-60secs (not to failure for safety reasons!)
+                    and then come down, rest and go back up again whenever you are ready. Emphasize quality of form over quantity of time.
+                </MudText>
+            </MudCardContent>
+            <MudCardActions>
+                <MudButton Variant="Variant.Text" Color="Color.Primary" Href="https://youtu.be/qLLJWmHlYZQ?t=58">
+                    Video
+                </MudButton>
+            </MudCardActions>
+        </MudCard>
+        @*This will go through the hand stand progression Perhaps these should be their own cards?*@
+
+        <MudCard Outlined="true">
+            <MudCardContent>
+                <MudText><b>L-Sit Progression</b> (2-3 Minutes)</MudText>
+                <MudText Typo="Typo.body2" onclick="location.href='https://www.reddit.com/r/bodyweightfitness/wiki/exercises/l-sit/'">
+                    Arms pointing slightly out from "straight up". Protract hard then slide your arms up the wall.
+                </MudText>
+            </MudCardContent>
+            <MudCardActions>
+                <MudButton Variant="Variant.Text" Color="Color.Primary" Href="https://youtu.be/gF-8XCHcbxc">
+                    Video
+                </MudButton>
+            </MudCardActions>
+        </MudCard>
+    </MudCardContent>
+
+    <MudCard>
+
+        <MudCardHeader>
+
+            <CardHeaderContent>
+                <MudText Typo="Typo.h6"><b>Mobility Work</b></MudText>
+            </CardHeaderContent>
+
+        </MudCardHeader>
+        @*        Needs to be some kind of functionality here that'll let the user pick their mobility work group*@
+        <MudCardContent>
+            <MudCard Outlined="true">
+                <MudCardContent>
+                    <MudText><b>Front Splits</b></MudText>
+                    <MudText Typo="Typo.body2" onclick="location.href='https://redefiningstrength.com/wp-content/uploads/2017/12/deadbugmodified.jpg'">
+                        The dead bug exercise is performed on the ground, so you need roughly the same amount of space as a yoga mat. And, you probably want to use a yoga mat or another type of exercise mat for comfort.
+                    </MudText>
+                </MudCardContent>
+                <MudCardActions>
+                    <MudButton Variant="Variant.Text" Color="Color.Primary" Href="https://youtu.be/x9Uz9zmW3Nk?t=50">Video</MudButton>
+                </MudCardActions>
+            </MudCard>
+
+        </MudCardContent>
+
+    </MudCard>
+
+    <MudCardActions>
+        <MudButton Variant="Variant.Text" Color="Color.Primary" Href="WorkOut">Finish Workout</MudButton>
+    </MudCardActions>
+
+</MudCard>
+
+@code {
+
+}

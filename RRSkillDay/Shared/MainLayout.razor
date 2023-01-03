@@ -10,5 +10,34 @@
         <MudContainer MaxWidth="MaxWidth.Medium">
             @Body
         </MudContainer>
+        <MudProgressLinear Color="Color.Primary" Value="@Value" Class="my-7" />
     </MudMainContent>
 </MudLayout>
+
+@code {
+	public int Value { get; set; }
+
+	public async void SimulateProgress()
+	{
+		Value = 0;
+		do
+		{
+			if (_disposed)
+			{
+				return;
+			}
+
+			Value += 4;
+			StateHasChanged();
+			await Task.Delay(500);
+
+		} while (Value < 100);
+
+		SimulateProgress();
+	}
+
+	protected override void OnInitialized() => SimulateProgress();
+
+	bool _disposed;
+	public void Dispose() => _disposed = true;
+}
