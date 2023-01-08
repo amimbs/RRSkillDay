@@ -1,4 +1,6 @@
 ﻿@page "/WarmUp"
+@inject WarmUpService WarmUpService
+
 
 <MudCard>
 
@@ -10,6 +12,7 @@
 
     </MudCardHeader>
 
+    @foreach (var Warmup)
     <MudCardContent>
 
         <MudCard Outlined="true">
@@ -26,7 +29,7 @@
             </MudCardActions>
         </MudCard>
 
-        <MudCard Outlined="true">
+@*        <MudCard Outlined="true">
             <MudCardContent>
                 <MudText><b>External Rotation</b> 10 Reps</MudText>
                 <MudText Typo="Typo.body2" onclick="location.href='https://i0.wp.com/www.nick-e.com/wp-content/uploads/2017/12/2017-12-31-19.21.12.jpg'">
@@ -72,7 +75,7 @@
             <MudCardActions>
                 <MudButton Variant="Variant.Text" Color="Color.Primary" Href="https://www.youtube.com/watch?v=mSZWSQSSEjE">Video</MudButton>
             </MudCardActions>
-        </MudCard>
+        </MudCard>*@
 
     </MudCardContent>
 
