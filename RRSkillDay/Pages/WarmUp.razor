@@ -1,0 +1,33 @@
+﻿@page "/WarmUp"
+@inject WarmUp 
+@inject WarmUpService
+
+<MudCard>
+
+    <MudCardHeader>
+
+        <CardHeaderContent>
+            <MudText Typo="Typo.h6"><b>Warm Up</b> (5-10 mins)</MudText>
+        </CardHeaderContent>
+
+    </MudCardHeader>
+
+    @foreach (warmUp in warmUps)
+    {
+        <ExerciseCard Exercise="warmUp"/>
+    }
+
+    <MudCardActions>
+        <MudButton Variant="Variant.Text" Color="Color.Primary" Href="WorkOut">Complete Warm-Up</MudButton>
+    </MudCardActions>
+
+</MudCard>
+
+@code {
+    private List<WarmUp> warmUps;
+
+    protected override async Task OnInitializedAsync()
+    {
+        warmUps = await WarmUpService.GetWarmUps();
+    }
+}

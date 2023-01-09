@@ -1,0 +1,23 @@
+﻿@typeparam TExercise
+
+<MudCardContent>
+
+	<MudCard Outlined="true">
+		<MudCardContent>
+			<MudText><b>@Exercise.Title</b> @Exercise.Repetitions</MudText>
+			<MudText Typo="Typo.body2" onclick="location.href='@Exercse.Link'">
+				@Exercise.Description
+			</MudText>
+		</MudCardContent>
+		<MudCardActions>
+			<MudButton Variant="Variant.Text" Color="Color.Primary" Href="@Exercise.VideoUrl">
+				Video
+			</MudButton>
+		</MudCardActions>
+	</MudCard>
+</MudCardContent>
+
+@code {
+	[Parameter]
+	public TExercise Exercise { get; set; }
+}
